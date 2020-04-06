@@ -14,4 +14,5 @@ window.onload = function changeBackgroundColor() {
     var randomColor = colorCollections[Math.floor(Math.random()*colorCollections.length)];
     this.document.getElementsByTagName('nav')[0].style.backgroundColor = randomColor;
     this.document.getElementsByClassName('title-container')[0].style.backgroundColor = randomColor;
+    this.document.getElementsByTagName("h1")[0].style.color = randomColor;
 }
