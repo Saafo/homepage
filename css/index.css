@@ -44,8 +44,8 @@ nav a:hover {
 
 .nav-container {
     color: #FFFFFF;
-    flex: 0 1 355px;
     margin: 5px;
+    padding-inline-start: 0;
 }
 
 .title-container {
