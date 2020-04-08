@@ -107,18 +107,38 @@
         }
 
         var self = this;
-
-        // if(this.tocTop > -1){
-        //     window.onscroll = function(){
-        //         var t = document.documentElement.scrollTop || document.body.scrollTop;
-        //         if(t< self.tocTop){
-        //             self.toc.setAttribute('style','position:absolute;top:'+ self.tocTop +'px;');
-        //         }else{
-        //             self.toc.setAttribute('style','position:fixed;top:10px;');
-        //         }
-
-        //     }
-        // }
+        //自己改过
+        if(this.tocTop > -1 && window.innerWidth > 1080){ //如果数据合法，宽度足够
+            var lis = document.getElementById('markdown-toc').getElementsByTagName('li'); //获取heading位置，根据页面位置对TOC高亮
+            var tipsPositions = new Array();
+            for(let i = 0; i < lis.length; i++) {
+                tipsPositions[i] = document.getElementById('tip'+i).offsetTop;
+            }
+            var randomColor = document.getElementsByClassName('title-container')[0].getAttribute('style').split(':')[1].split(';')[0]; //获取随机颜色
+            var index = document.getElementsByClassName('blog-sidebar-content')[0];
+            
+            window.onscroll = function(){ //处理TOC随页面滑动
+                var width = $('.blog-sidebar-content').width(); //动态获取宽度
+                var t = document.documentElement.scrollTop || document.body.scrollTop;
+                if(t != 0 && t < self.tocTop){
+                    index.setAttribute('style','position:absolute;top:'+ self.tocTop +'px;width:' + width + 'px;');
+                }else 
+                if(t == 0){
+                    index.removeAttribute('style');
+                }else{
+                    index.setAttribute('style','position:fixed;top:10px;width:' + width + 'px;');
+                }
+                // TOC 根据位置变色
+                for(let i = 0; i < tipsPositions.length - 1; i++) {
+                    if(t >= tipsPositions[i] - 1 && t < tipsPositions[i + 1]) {
+                        for(let i = 0; i < lis.length; i++) {
+                            lis[i].getElementsByTagName('a')[0].style.color='#000000';
+                        }
+                        lis[i].getElementsByTagName('a')[0].style.color=randomColor;
+                    }
+                }        
+            }
+        }
 
     };
 

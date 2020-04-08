@@ -1,7 +1,7 @@
 function changeBackgroundColor() {
     var colorCollections = [
-        '#000000', //黑色
-        '#333333', //灰色
+        // '#000000', //黑色
+        '#444444', //灰色
         '#2e77ff', //深蓝
         '#31e4eb', //蓝绿
         '#b6d333', //青绿

@@ -9,12 +9,15 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/marked/0.8.2/marked.min.js"></script>
-    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/highlight.js/9.18.1/highlight.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/blog.js"></script>
     <script src="js/md-toc.js"></script>
+    <!-- <link href="css/github.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcss.com/github-markdown-css/4.0.0/github-markdown.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/monokai-sublime.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/blog.css"/>
 </head>
 
 <body>
@@ -39,9 +42,9 @@
     <!-- Content -->
     <div class="content-container">
         <div class="main-content-container">
-            <div id="main-content">
+            <article id="main-content" class="markdown-body">
                 你可能走错了路，这里并没有任何信息。
-            </div>
+            </article>
         </div>
         <aside class="sidebar-container">
             <div class="sidebar-content blog-sidebar-content">
@@ -51,6 +54,17 @@
                 </div>
             </div>
         </aside>
+    </div>
+    <!-- Comments -->
+    <div class="comments-container">
+        <script src="https://utteranc.es/client.js"
+            repo="saafo/homepage"
+            issue-term="title"
+            label="💬"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+        </script>
     </div>
     <!-- Footer -->
     <footer class="footer-container">

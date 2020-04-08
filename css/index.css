@@ -76,10 +76,6 @@ nav a:hover {
     padding: 0;
 }
 
-#blog-h1 {
-    color: #FFFFFF;
-}
-
 .title-container h1::after {
     content: attr(data-spotlight);
     color: transparent;
@@ -133,23 +129,6 @@ nav a:hover {
     margin: 2rem;
 }
 
-pre {
-    background-color: #35393c;
-    border-radius: 0.3rem;
-    color: #c7c3b9;
-    overflow-x: scroll;
-    padding: 0.6rem;
-}
-
-code {
-    margin: 0.4rem;
-    font-size: 0.84rem;
-}
-
-.hljs {
-    background: #35393c;
-}
-
 .sidebar-container {
     background-color: #FFFFFF;
     border-radius: 1rem;
@@ -163,16 +142,11 @@ code {
     margin: 0.7rem;
 }
 
-.blog-sidebar-content p {
-    text-align: center;
-}
-
 .sidebar-content span {
     margin:0.2rem;
     height: 2rem;
     border-radius: 1rem;
     display: inline-block;
-    
 }
 
 .sidebar-container a {
@@ -183,25 +157,6 @@ code {
 
 .sidebar-container a:hover {
     color: rgb(236, 236, 236);
-}
-
-#markdown-toc a {
-    color: #000000;
-    margin: 0;
-}
-
-.toc {
-    word-wrap: break-word;
-    word-break: normal;
-}
-
-.toc ul {
-    list-style-type: none;
-    padding-left: 1rem;
-}
-
-.toc :first-child {
-    padding-left: 0;
 }
 
 @media only screen and (max-width: 1080px) {
