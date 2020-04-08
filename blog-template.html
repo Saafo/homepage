@@ -5,11 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-    <title>Mintsky's Homepage</title>
-    <link rel="stylesheet" href="css/index.css"/>
+    <title>Mintsky's Blog</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/marked/0.8.2/marked.min.js"></script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/highlight.js/9.18.1/highlight.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/md-toc.js"></script>
+    <link rel="stylesheet" href="css/index.css"/>
 </head>
 
 <body>
@@ -29,27 +34,21 @@
     <!-- Body -->
     <!-- Title -->
     <div class="title-container random-bg-color">
-        <h1 data-spotlight="Mintsky's Homepage" class="random-color">Mintsky's Homepage</h1>
+        <h1 id="blog-h1">Mintsky's Blog</h1>
     </div>
     <!-- Content -->
     <div class="content-container">
         <div class="main-content-container">
-            <div class="main-content">
-                Nothing here temporarily.
+            <div id="main-content">
+                你可能走错了路，这里并没有任何信息。
             </div>
         </div>
         <aside class="sidebar-container">
-            <div class="sidebar-content">
-                <p>快速导航</p>
-                <span class="random-bg-color">
-                    <a href="http://rss.mintsky.xyz">RSSHub</a>
-                </span>
-                <span class="random-bg-color">
-                    <a href="http://database.mintsky.xyz">PgAdmin4</a>
-                </span>
-                <span class="random-bg-color">
-                    <a href="http://dxy.mintsky.xyz">丁香园</a>
-                </span>
+            <div class="sidebar-content blog-sidebar-content">
+                <p>Table of Content</p>
+                <div id="markdown-toc">
+                    Nothing here
+                </div>
             </div>
         </aside>
     </div>

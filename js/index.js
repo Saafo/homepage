@@ -1,4 +1,4 @@
-window.onload = function changeBackgroundColor() {
+function changeBackgroundColor() {
     var colorCollections = [
         '#000000', //黑色
         '#333333', //灰色
@@ -23,3 +23,7 @@ window.onload = function changeBackgroundColor() {
     }
 
 }
+
+$(document).ready(function() {
+    changeBackgroundColor();
+})
