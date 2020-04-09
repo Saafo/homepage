@@ -3,22 +3,28 @@ function getContent(){
     try {
         var url = window.location.pathname.split('/')[1];
         // url = '20200218_ali-ecs'
-        blogYear = url.slice(0,4);
-        blogMonth = url.slice(4,6);
-        blogDate = url.slice(6,8);
-        $.get("blog/"+url+".md", function(result){
-            if(result) {
-                hljs.initHighlightingOnLoad();
-                marked.setOptions({
-                    highlight: function (code) {
-                        return hljs.highlightAuto(code).value;
-                    }
-                });
-                var blogTime = blogYear+' · '+blogMonth+' · '+blogDate+'\n\n';
-                var license = "\n\n---\n> 版权声明：本文为[@Saafo](https://github.com/Saafo)的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。\n> \n> 原文链接："+window.location.href;
-                $("#main-content").html(marked(blogTime+result+license));
-            }
-        });
+        if(url.length > 8){
+            blogYear = url.slice(0,4);
+            blogMonth = url.slice(4,6);
+            blogDate = url.slice(6,8);
+            $.get("blog/"+url+".md", function(result){
+                if(result) {
+                    hljs.initHighlightingOnLoad();
+                    marked.setOptions({
+                        highlight: function (code) {
+                            return hljs.highlightAuto(code).value;
+                        }
+                    });
+                    var blogTime = blogYear+' · '+blogMonth+' · '+blogDate+'\n\n';
+                    var license = "\n\n---\n> 版权声明：本文为[@Saafo](https://github.com/Saafo)的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。\n> \n> 原文链接："+window.location.href;
+                    $("#main-content").html(marked(blogTime+result+license));
+                }else{
+                    throw TypeError
+                }
+            });
+        }else{
+            throw TypeError
+        }
     } catch (TypeError) {
         return 1; //url格式问题，报错
     }
