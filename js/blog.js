@@ -2,7 +2,7 @@ var status;
 function getContent(){
     try {
         var url = window.location.pathname.split('/')[1];
-        // url = '20200218_ali-ecs'
+        // url = '20200218_ali-ecs' //debugger
         if(url.length > 8){
             blogYear = url.slice(0,4);
             blogMonth = url.slice(4,6);
@@ -52,10 +52,9 @@ $(window).on('load',async function() {
     status = await checkExist();
     if(status == 0) {
         document.getElementById("markdown-toc").innerHTML=""; //删掉原来的内容
-        var top = document.getElementsByClassName('blog-sidebar-content')[0].offsetTop;
         new Toc('main-content',{
             'level': 2,
-            'top': top,
+            'top': naviTop,
             'class': 'toc',
             'targetId': 'markdown-toc'
         });

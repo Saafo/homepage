@@ -26,4 +26,25 @@ function changeBackgroundColor() {
 
 $(document).ready(function() {
     changeBackgroundColor();
+    navi = document.getElementsByClassName('sidebar-content')[0];
+    naviTop = navi.offsetTop;
 })
+
+var naviTop = 0;
+var navi = null;
+
+window.onscroll = function(){
+    if(window.innerWidth > 1080){
+        var width = $('.sidebar-content').width(); //动态获取宽度
+        
+        var t = document.documentElement.scrollTop || document.body.scrollTop;
+        if(t != 0 && t < naviTop){
+            navi.setAttribute('style','position:absolute;top:'+ naviTop +'px;width:' + width + 'px;');
+        }else 
+        if(t == 0){
+            navi.removeAttribute('style');
+        }else{
+            navi.setAttribute('style','position:fixed;top:10px;width:' + width + 'px;');
+        }
+    }
+}
