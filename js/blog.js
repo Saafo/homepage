@@ -65,23 +65,3 @@ $(window).on('load',async function() {
         document.title = "你来到了一片荒芜之地 - Mintsky's Blog"
     }
 })
-
-(function(window) {
-    window.onscroll = function(){
-        var t = document.documentElement.scrollTop || document.body.scrollTop;
-        var lis = document.getElementById('markdown-toc').getElementsByTagName('li');
-        var lisPositions = new Array();
-        for(let i = 0; i < lis.length; i++) {
-            lisPositions[i] = lis[i].offsetTop;
-        }
-        for(let i = 0; i < lisPositions.length - 1; i++) {
-            if(t > lisPositions[i] && t < lisPositions[i + 1]) {
-                for(let i = 0; i < lis.length; i++) {
-                    lis[i].getElementsByTagName('a')[0].style.color='#000000';
-                }
-                lis[i].getElementsByTagName('a')[0].style.color='red';
-            }
-        }
-
-    }
-})(window);
