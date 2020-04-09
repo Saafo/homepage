@@ -118,25 +118,29 @@
             var index = document.getElementsByClassName('blog-sidebar-content')[0];
             
             window.onscroll = function(){ //处理TOC随页面滑动
-                var width = $('.blog-sidebar-content').width(); //动态获取宽度
-                var t = document.documentElement.scrollTop || document.body.scrollTop;
-                if(t != 0 && t < self.tocTop){
-                    index.setAttribute('style','position:absolute;top:'+ self.tocTop +'px;width:' + width + 'px;');
-                }else 
-                if(t == 0){
-                    index.removeAttribute('style');
-                }else{
-                    index.setAttribute('style','position:fixed;top:10px;width:' + width + 'px;');
-                }
-                // TOC 根据位置变色
-                for(let i = 0; i < tipsPositions.length - 1; i++) {
-                    if(t >= tipsPositions[i] - 1 && t < tipsPositions[i + 1]) {
-                        for(let i = 0; i < lis.length; i++) {
-                            lis[i].getElementsByTagName('a')[0].style.color='#000000';
-                        }
-                        lis[i].getElementsByTagName('a')[0].style.color=randomColor;
+                if(window.innerWidth > 1080){
+                    var width = $('.blog-sidebar-content').width(); //动态获取宽度
+                    var t = document.documentElement.scrollTop || document.body.scrollTop;
+                    if(t != 0 && t < self.tocTop){
+                        index.setAttribute('style','position:absolute;top:'+ self.tocTop +'px;width:' + width + 'px;');
+                    }else 
+                    if(t == 0){
+                        index.removeAttribute('style');
+                    }else{
+                        index.setAttribute('style','position:fixed;top:10px;width:' + width + 'px;');
                     }
-                }        
+                    // TOC 根据位置变色
+                    for(let i = 0; i < tipsPositions.length - 1; i++) {
+                        if(t >= tipsPositions[i] - 1 && t < tipsPositions[i + 1]) {
+                            for(let i = 0; i < lis.length; i++) {
+                                lis[i].getElementsByTagName('a')[0].style.color='#000000';
+                            }
+                            lis[i].getElementsByTagName('a')[0].style.color=randomColor;
+                        }
+                    }        
+                }else{
+                    index.removeAttribute('style');
+                }
             }
         }
 

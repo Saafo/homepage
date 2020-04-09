@@ -119,14 +119,47 @@ nav a:hover {
 
 .main-content-container {
     flex: 1;
-    background-color: #FFFFFF;
-    border-radius: 1rem;
-    margin: 0.5rem;
     margin-top: 1rem;
 }
 
 #main-content {
-    margin: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.post {
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-header {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #EAECEF;
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+.post-button {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    line-height: 2.5rem;
+    width: 6rem;
+    border-radius: 0.5rem;
+}
+
+.post-button a {
+    color: #FFFFFF;
 }
 
 .sidebar-container {

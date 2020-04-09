@@ -2,6 +2,18 @@
     color: #FFFFFF;
 }
 
+.main-content-container {
+    flex: 1;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    margin-top: 1rem;
+}
+
+ #main-content {
+     margin: 2rem;
+ }
+
 .markdown-body pre {
     border-radius: 0.3rem;
     background-color: #23241f;

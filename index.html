@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh_Hans">
-
+<!-- TODO引入githubcss -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
     <title>Mintsky's Homepage</title>
+    <link href="https://cdn.bootcss.com/github-markdown-css/4.0.0/github-markdown.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
@@ -35,7 +36,82 @@
     <div class="content-container">
         <div class="main-content-container">
             <div id="main-content">
-                Nothing here temporarily.
+                <div class='post'>
+                    <header class='post-header'>
+                        <h1 class='post-title'>
+                            <a href='http://blog.mintsky.xyz/20200307_docker-compose-postgres' class='random-color'>
+                                用docker-compose部署postgresql和pgAdmin4
+                            </a>
+                        </h1>
+                        <div class='post-meta'>
+                            <span class='post-time'>2020·03·07</span>
+                        </div>
+                    </header>
+                    <div class='post-body markdown-body'>
+                        <blockquote>
+                            <p>本来一直在用<code>docker</code>部署<code>postgresql</code>和<code>pgAdmin4</code>，但每次部署起来参数很多很麻烦，而且重启容器或者服务器都很麻烦，索性用<code>docker-compose</code>来部署。</p>
+                            </blockquote>
+                            <h2>准备步骤</h2>
+                            <p>安装<code>docker-compose</code></p>
+                            <p>```bash
+                            apt install docker-compose</p>                    </div>
+                    <div class='post-button random-bg-color'>
+                        <a href='http://blog.mintsky.xyz/20200307_docker-compose-postgres'>
+                            阅读全文
+                        </a>
+                    </div>
+                </div>
+                <div class='post'>
+                    <header class='post-header'>
+                        <h1 class='post-title'>
+                            <a href='http://blog.mintsky.xyz/20200229_configure-go-in-vscode' class='random-color'>
+                                Golang 在 VSCode 中的调试配置
+                            </a>
+                        </h1>
+                        <div class='post-meta'>
+                            <span class='post-time'>2020·02·29</span>
+                        </div>
+                    </header>
+                    <div class='post-body markdown-body'>
+                        <p>（解决Golang在VSCode中调试时无法接收标准输入(stdin)的问题）</p>
+                            <blockquote>
+                            <p>最近开始接触Go语言，但在配置VSCode的调试文件的时候发现VSCode中的官方GO插件调试时用的是调试控制台(debug console)而非终端(terminal)，找了很多设置也没有类似于<code>terminal</code>或者<code>internalTerminal</code>或者<code>externalTerminal</code>的配置项。最终在<code>vscode-go</code>仓库的<a href="https://github.com/microsoft/vscode-go/issues/219">issue</a>里找到了问题所在。鉴于目前还没有国内的博客帖子总结该问题，在这里总结一下问题原因及解决方案。</p>
+                            </blockquote>
+                            <h3>问题起因</h3>
+                            <p>最开始以为是<code>vscode-go</code>插件的锅，但在相关问题的<a href="https://github.com/microsoft/vscode-go/issues/219">issue</a>里，<code>vscode-go</code>的开发团队给出的回复是，由于<code>delve</code>调试器本身在普通模式运行时就无法直接接受命令行标准输入(stdin)，导致配套的相关插件也无法正常工作。本来<code>delve</code>自身加上支持接受命令行输入的功能即可彻底解决这个问题，但似乎<code>delve</code>开发团队的人员<a href="https://github.com/go-delve/delve/issues/1274/#issuecomment-406981956">并不对此感兴趣</a>，不少开发者也同样也对此表示<a href="https://github.com/microsoft/vscode-go/issues/219/#issuecomment-455968894">无奈</a>,只有用目前其他开发者给出的<a href="https://github.com/microsoft/vscode-go/issues/219/#issuecomment-530933960">折中的解决办法</a>。</p>                    </div>
+                    <div class='post-button random-bg-color'>
+                        <a href='http://blog.mintsky.xyz/20200229_configure-go-in-vscode'>
+                            阅读全文
+                        </a>
+                    </div>
+                </div>
+                <div class='post'>
+                    <header class='post-header'>
+                        <h1 class='post-title'>
+                            <a href='http://blog.mintsky.xyz/20200218_ali-ecs' class='random-color'>
+                                阿里云ECS初始化及常用操作
+                            </a>
+                        </h1>
+                        <div class='post-meta'>
+                            <span class='post-time'>2020·02·18</span>
+                        </div>
+                    </header>
+                    <div class='post-body markdown-body'>
+                        <h2>初始化</h2>
+                            <ul>
+                            <li>重置实例密码</li>
+                            <li>控制台重启实例</li>
+                            <li>apt update &amp; upgrade</li>
+                            <li>apt install git</li>
+                            <li>apt install axel</li>
+                            <li>apt install python3-pip</li>
+                            </ul>                    </div>
+                    <div class='post-button random-bg-color'>
+                        <a href='http://blog.mintsky.xyz/20200218_ali-ecs'>
+                            阅读全文
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <aside class="sidebar-container">

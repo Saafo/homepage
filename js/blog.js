@@ -2,6 +2,7 @@ var status;
 function getContent(){
     try {
         var url = window.location.pathname.split('/')[1];
+        // url = '20200218_ali-ecs'
         blogYear = url.slice(0,4);
         blogMonth = url.slice(4,6);
         blogDate = url.slice(6,8);
