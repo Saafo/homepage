@@ -160,6 +160,7 @@ nav a:hover {
 
 .post-button a {
     color: #FFFFFF;
+    padding: 0.5rem 1rem;
 }
 
 .sidebar-container {
@@ -187,7 +188,7 @@ nav a:hover {
 
 .sidebar-container a {
     color: #FFFFFF;
-    margin: 1rem;
+    padding: 0.3rem 1rem;
     line-height: 2rem;
 }
 
