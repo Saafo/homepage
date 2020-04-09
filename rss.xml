@@ -4,11 +4,25 @@
         <title>Mintsky's Blog</title>
         <link>http://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Sat, 07 Mar 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 10 Apr 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>人类的本质是造轮子</title>
+            <link>http://blog.mintsky.xyz/20200410_new-home</link>
+            <guid>http://blog.mintsky.xyz/20200410_new-home</guid>
+            <pubDate>Fri, 10 Apr 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>博客终于建好了。</p>
+                <p>这里，我用了“建”，没有用“搭”。</p>
+                <p>起因是，先前为了练手建了个主页，如果再用博客模板的话，就只有和原来的主页说再见了~~别啊~~</p>
+                <p>于是脑子一时抽风，干脆自己写个框架吧。</p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>用docker-compose部署postgresql和pgAdmin4</title>
             <link>http://blog.mintsky.xyz/20200307_docker-compose-postgres</link>
