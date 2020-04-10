@@ -65,13 +65,13 @@
     .comments-container {
         /* width: 70%; */
         margin-left: 10%;
-        margin-right: 33%;
+        margin-right: 36%;
     }
 }
 @media only screen and (min-width: 1300px) {
     .comments-container {
         /* width: 75%; */
         margin-left: 10%;
-        margin-right: 30%;
+        margin-right: 32%;
     }
 }

@@ -9,6 +9,7 @@ function getContent(){
             blogDate = url.slice(6,8);
             $.get("blog/"+url+".md", function(result){
                 if(result) {
+                    document.title = result.split('\n')[0].split('# ')[1] + " - Mintsky's Blog"
                     hljs.initHighlightingOnLoad();
                     marked.setOptions({
                         highlight: function (code) {
