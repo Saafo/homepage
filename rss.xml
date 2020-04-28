@@ -2,7 +2,7 @@
 <rss version='2.0'>
     <channel>
         <title>Mintsky's Blog</title>
-        <link>http://mintsky.xyz/rss.xml</link>
+        <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
         <lastBuildDate>Fri, 10 Apr 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
@@ -11,8 +11,8 @@
 
         <item>
             <title>人类的本质是造轮子</title>
-            <link>http://blog.mintsky.xyz/20200410_new-home</link>
-            <guid>http://blog.mintsky.xyz/20200410_new-home</guid>
+            <link>https://blog.mintsky.xyz/20200410_new-home</link>
+            <guid>https://blog.mintsky.xyz/20200410_new-home</guid>
             <pubDate>Fri, 10 Apr 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>博客终于建好了。</p>
@@ -25,8 +25,8 @@
         </item>
         <item>
             <title>用docker-compose部署postgresql和pgAdmin4</title>
-            <link>http://blog.mintsky.xyz/20200307_docker-compose-postgres</link>
-            <guid>http://blog.mintsky.xyz/20200307_docker-compose-postgres</guid>
+            <link>https://blog.mintsky.xyz/20200307_docker-compose-postgres</link>
+            <guid>https://blog.mintsky.xyz/20200307_docker-compose-postgres</guid>
             <pubDate>Sat, 07 Mar 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<blockquote>
@@ -42,8 +42,8 @@
         </item>
         <item>
             <title>Golang 在 VSCode 中的调试配置</title>
-            <link>http://blog.mintsky.xyz/20200229_configure-go-in-vscode</link>
-            <guid>http://blog.mintsky.xyz/20200229_configure-go-in-vscode</guid>
+            <link>https://blog.mintsky.xyz/20200229_configure-go-in-vscode</link>
+            <guid>https://blog.mintsky.xyz/20200229_configure-go-in-vscode</guid>
             <pubDate>Sat, 29 Feb 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>（解决Golang在VSCode中调试时无法接收标准输入(stdin)的问题）</p>
@@ -58,8 +58,8 @@
         </item>
         <item>
             <title>阿里云ECS初始化及常用操作</title>
-            <link>http://blog.mintsky.xyz/20200218_ali-ecs</link>
-            <guid>http://blog.mintsky.xyz/20200218_ali-ecs</guid>
+            <link>https://blog.mintsky.xyz/20200218_ali-ecs</link>
+            <guid>https://blog.mintsky.xyz/20200218_ali-ecs</guid>
             <pubDate>Tue, 18 Feb 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<h2>初始化</h2>

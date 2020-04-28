@@ -1,6 +1,6 @@
 # My Homepage
 
-[Mintsky's Homepage](http://mintsky.xyz)
+[Mintsky's Homepage](https://mintsky.xyz)
 
 >人类的本质是造轮子。
 
@@ -32,10 +32,10 @@
 * `nginx`配置：
   ```
   server{
-                listen 80;
+                listen 443 ssl;
                 server_name blog.mintsky.xyz;
                 location = / {
-                        return 301 http://mintsky.xyz;
+                        return 301 https://mintsky.xyz;
                 }
                 location / {
                         root (这里放homepage文件夹目录);
