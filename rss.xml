@@ -4,11 +4,50 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Fri, 10 Apr 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 03 May 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>从hello.go到Lighter Docker（一）在国内编译Docker-ce</title>
+            <link>https://blog.mintsky.xyz/20200503_from-hello.go-to-lighter-docker-2</link>
+            <guid>https://blog.mintsky.xyz/20200503_from-hello.go-to-lighter-docker-2</guid>
+            <pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<blockquote>
+                <p>众所周知，由于国内的网络环境，诸如docker.com, github.com, debian.org, golang.org等网站的连接速度并不理想。因为<code>Docker</code>的编译并不仅仅是本地编译，而是需要很多的网络依赖包，在编译的过程中需要频繁地从以上网站下载资源。这篇文章详细地讲述了怎样在国内的网络环境编译<code>Docker</code>。</p>
+                </blockquote>
+                <h2>教程环境</h2>
+                <ul>
+                <li>Ubuntu Server 20.04 (focal)(本文命令为focal的地方，其他版本的同学可以自行替换成对应的代号)</li>
+                <li>Docker v19.03.8</li>
+                <li>需要一个socks&amp;http(s)代理，能够通过<code>export</code>命令导入运行环境即可。</li>
+                </ul>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
+        <item>
+            <title>从hello.go到Lighter Docker（一）在国内编译moby</title>
+            <link>https://blog.mintsky.xyz/20200501_from-hello.go-to-lighter-docker-1</link>
+            <guid>https://blog.mintsky.xyz/20200501_from-hello.go-to-lighter-docker-1</guid>
+            <pubDate>Fri, 01 May 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<blockquote>
+                <p>众所周知，由于国内的网络环境，诸如docker.com, github.com, debian.org, golang.org等网站的连接速度并不理想。因为<code>Docker</code>的编译并不仅仅是本地编译，而是需要很多的网络依赖包，在编译的过程中需要频繁地从以上网站下载资源。这篇文章详细地讲述了怎样在国内的网络环境编译<code>Docker</code>。</p>
+                </blockquote>
+                <h2>教程环境</h2>
+                <ul>
+                <li>Ubuntu Server 20.04</li>
+                <li>Docker v19.03.8, build afacb8b7f0</li>
+                <li>Go v1.13.8 linux/amd64</li>
+                <li>Moby v19.03.8 <a href="https://github.com/moby/moby/tree/f6163d3f7a10c5d01a92bc8b86e204d784b2f6d6">commit f6163d3</a></li>
+                </ul>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>人类的本质是造轮子</title>
             <link>https://blog.mintsky.xyz/20200410_new-home</link>
