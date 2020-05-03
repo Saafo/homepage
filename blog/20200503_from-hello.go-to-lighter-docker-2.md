@@ -31,6 +31,16 @@ apt install docker.io #不使用sudo: 这里建议用root账户安装docker
 apt install make
 ```
 
+### 准备alpine镜像
+
+编译过程中会用到alpine镜像，虽然能自动安装，但好像安装后会卡住，可以尝试先运行
+
+```bash
+docker pull alpine
+```
+
+来提前准备alpine镜像
+
 ### 准备代理
 
 ```bash
