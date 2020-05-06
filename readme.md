@@ -37,6 +37,10 @@
                 location = / {
                         return 301 https://mintsky.xyz;
                 }
+                location ~* \.md$ {
+                        root (这里放homepage文件夹目录);
+                        try_files $uri =404;
+                }
                 location / {
                         root (这里放homepage文件夹目录);
                         try_files $uri /blog-template.html =404;
