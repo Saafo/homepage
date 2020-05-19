@@ -4,11 +4,28 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Sun, 03 May 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 05 May 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>从hello.go到Lighter Docker（三）知识准备和项目配置</title>
+            <link>https://blog.mintsky.xyz/20200505_from-hello.go-to-lighter-docker-3</link>
+            <guid>https://blog.mintsky.xyz/20200505_from-hello.go-to-lighter-docker-3</guid>
+            <pubDate>Tue, 05 May 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>这篇文章会比较水，主要是教程链接和学习路线指引。</p>
+                <p>对<code>Docker</code>源码做出修改，我们需要一些基本的能力，以下给出一些资料和教程。</p>
+                <h2>Go 语法相关</h2>
+                <ul>
+                <li><a href="https://github.com/unknwon/the-way-to-go_ZH_CN">The Way to Go</a></li>
+                <li><a href="https://www.runoob.com/go/go-tutorial.html">Go 语言教程 - 菜鸟教程</a></li>
+                </ul>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>从hello.go到Lighter Docker（二）在国内编译Docker-ce</title>
             <link>https://blog.mintsky.xyz/20200503_from-hello.go-to-lighter-docker-2</link>
@@ -35,7 +52,7 @@
             <pubDate>Fri, 01 May 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<blockquote>
-                <p>众所周知，由于国内的网络环境，诸如docker.com, github.com, debian.org, golang.org等网站的连接速度并不理想。因为<code>Docker</code>的编译并不仅仅是本地编译，而是需要很多的网络依赖包，在编译的过程中需要频繁地从以上网站下载资源。这篇文章详细地讲述了怎样在国内的网络环境编译<code>Docker</code>。</p>
+                <p>众所周知，由于国内的网络环境，诸如docker.com, github.com, debian.org, golang.org等网站的连接速度并不理想。因为<code>moby</code>的编译并不仅仅是本地编译，而是需要很多的网络依赖包，在编译的过程中需要频繁地从以上网站下载资源。这篇文章详细地讲述了怎样在国内的网络环境编译<code>moby</code>。</p>
                 </blockquote>
                 <h2>教程环境</h2>
                 <ul>

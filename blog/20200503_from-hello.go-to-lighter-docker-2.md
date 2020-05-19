@@ -46,6 +46,8 @@ docker pull alpine
 ```bash
 #不一定这样照做，有等效代理即可
 export all_proxy=socks5://[这里写IP地址]:[这里写socks5端口] 
+export HTTP_PROXY=socks5://[这里写IP地址]:[这里写socks5端口] 
+export HTTPS_PROXY=socks5://[这里写IP地址]:[这里写socks5端口] 
 ```
 
 ### 将docker-ce clone到本地

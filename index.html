@@ -9,7 +9,7 @@
     <link href="https://cdn.bootcss.com/github-markdown-css/4.0.0/github-markdown.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
 </head>
 
@@ -39,6 +39,31 @@
     <div class="content-container">
         <div class="main-content-container">
             <div id="main-content">
+                <div class='post'>
+                    <header class='post-header'>
+                        <h1 class='post-title'>
+                            <a href='https://blog.mintsky.xyz/20200505_from-hello.go-to-lighter-docker-3' class='random-color'>
+                                从hello.go到Lighter Docker（三）知识准备和项目配置
+                            </a>
+                        </h1>
+                        <div class='post-meta'>
+                            <span class='post-time'>2020·05·05</span>
+                        </div>
+                    </header>
+                    <div class='post-body markdown-body'>
+                        <p>这篇文章会比较水，主要是教程链接和学习路线指引。</p>
+                            <p>对<code>Docker</code>源码做出修改，我们需要一些基本的能力，以下给出一些资料和教程。</p>
+                            <h2>Go 语法相关</h2>
+                            <ul>
+                            <li><a href="https://github.com/unknwon/the-way-to-go_ZH_CN">The Way to Go</a></li>
+                            <li><a href="https://www.runoob.com/go/go-tutorial.html">Go 语言教程 - 菜鸟教程</a></li>
+                            </ul>                    </div>
+                    <div class='post-button random-bg-color'>
+                        <a href='https://blog.mintsky.xyz/20200505_from-hello.go-to-lighter-docker-3'>
+                            阅读全文
+                        </a>
+                    </div>
+                </div>
                 <div class='post'>
                     <header class='post-header'>
                         <h1 class='post-title'>
@@ -79,7 +104,7 @@
                     </header>
                     <div class='post-body markdown-body'>
                         <blockquote>
-                            <p>众所周知，由于国内的网络环境，诸如docker.com, github.com, debian.org, golang.org等网站的连接速度并不理想。因为<code>Docker</code>的编译并不仅仅是本地编译，而是需要很多的网络依赖包，在编译的过程中需要频繁地从以上网站下载资源。这篇文章详细地讲述了怎样在国内的网络环境编译<code>Docker</code>。</p>
+                            <p>众所周知，由于国内的网络环境，诸如docker.com, github.com, debian.org, golang.org等网站的连接速度并不理想。因为<code>moby</code>的编译并不仅仅是本地编译，而是需要很多的网络依赖包，在编译的过程中需要频繁地从以上网站下载资源。这篇文章详细地讲述了怎样在国内的网络环境编译<code>moby</code>。</p>
                             </blockquote>
                             <h2>教程环境</h2>
                             <ul>
