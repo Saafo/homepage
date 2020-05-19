@@ -4,11 +4,27 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Tue, 05 May 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 17 May 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>flask框架概念理解及部署方式</title>
+            <link>https://blog.mintsky.xyz/20200517_flask-startup</link>
+            <guid>https://blog.mintsky.xyz/20200517_flask-startup</guid>
+            <pubDate>Sun, 17 May 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<blockquote>
+                <p>最近写了一个<code>flask</code>项目，在整个学习的过程中走了不少的弯路，但同时对<code>flask</code>也有了更深刻的理解。我将我的理解做个简单的记录，同时也是一个指路贴，大家可以对<code>flask</code>有一个大概的了解，结合自己的需求找到需要学习的知识点进行更进一步的学习。</p>
+                </blockquote>
+                <h2>基本概念</h2>
+                <h3>最简框架解析</h3>
+                <p>我们先来看一个最简单的例子：</p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>从hello.go到Lighter Docker（三）知识准备和项目配置</title>
             <link>https://blog.mintsky.xyz/20200505_from-hello.go-to-lighter-docker-3</link>
