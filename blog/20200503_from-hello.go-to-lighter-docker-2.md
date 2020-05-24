@@ -60,20 +60,21 @@ git clone https://github.com/docker/docker-ce.git
 
 ### 配置DNS
 
-针对可能出现的`Temporary failure resolving 'archive.ubuntu.com'`的问题，可以尝试配置宿主机DNS：
+针对可能出现的`Temporary failure resolving 'archive.ubuntu.com'`或者无法解析`github.com`地址等问题，可以尝试配置宿主机DNS，这里给出一种办法，其他方法可以参考[官方文档](https://wiki.debian.org/NetworkConfiguration#Defining_the_.28DNS.29_Nameservers)
 
 ```bash
-vim /etc/resolv.conf #在root模式下，不需要sudo
+vim /etc/network/interfaces #在root模式下，不需要sudo
 ```
 
-添加以下DNS服务器：
+这是一个新文件，我们只需要添加一下内容：
 
 ```text
-nameserver 114.114.114.114
-nameserver 8.8.8.8
+auto eth0
+iface eth0 inet static
+    dns-nameservers 114.114.114.114 8.8.8.8
 ```
 
-（可能需要重启来应用设置，暂时没做过实验）
+保存即可。如果还是没有解决问题，重启即可。重启后记得设置代理。
 
 ## 源文件操作
 

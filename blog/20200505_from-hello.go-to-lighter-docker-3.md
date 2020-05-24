@@ -73,21 +73,22 @@
 
 `Docker-ce`的项目主要由两个部分构成，`/components/cli`和`/components/engine`，分别对应[`docker-cli`](https://github.com/docker/cli)项目和[`moby`](https://github.com/moby/moby)项目。这两个项目相对独立发展，`docker-ce`将它们合并在一起。因此，`cli`和`engine`的包管理也是相对独立的。我们可以在`cli`和`engine`各自的根目录下看到`vendor`文件夹。
 
-但是，`vendor`的要求是在`$GOPATH/src/[domain]/[yourname]/[yourrepo]/vendor`下才能识别，所以我们需要加两个软链接，将`docker-ce/components/cli`和`docker-ce/components/engine`两个文件夹创建软连接到`docker-ce`所在的目录。
+但是，实测在`Goland`中，`vendor`的要求是在`$GOPATH/src/[domain]/[name]/[repo]/vendor`下才能识别，并且因为在`go modules`之前的 go 包管理方式还无法解决项目名字更换之后，`import`项目本身某部分必须改名字的问题，~~所以我们需要做一个全局替换。~~实测全局替换涉及到的问题过于复杂，最终我采取了以下策略：
 
-以我的环境为例，我从`github.com/docker/docker-ce` fork 到了`github.com/saafo/lighter-docker` ， `domain=github.com`,  `yourname=saafo`, `yourrepo=lighter-docker`，则应该执行以下命令来创建软链接：
+我们需要加两个软链接，将`[yourrepo]/components/cli`和`[yourrepo]/components/engine`两个文件夹创建软连接到`docker`目录下。
+
+以我的环境为例，我从`github.com/docker/docker-ce` fork 到了`github.com/saafo/lighter-docker` ， `domain=github.com`,  `yourname=saafo`, `yourrepo=lighter-docker`。
+
+* 执行以下命令来创建软链接：
 
 ```bash
-cd $GOPATH/src/github.com/saafo
-ln -s ./lighter-docker/components/cli ./cli
-ln -s ./lighter-docker/components/engine ./engine
+cd $GOPATH/src/github.com
+mkdir docker
+ln -s ./saafo/lighter-docker/components/cli ./docker/cli
+ln -s ./saafo/lighter-docker/components/engine ./docker/docker
 ```
-
-除此之外，我的仓库名字已经不是`docker/docker`了，因为在`go modules`之前的 go 包管理方式还无法解决项目名字更换之后，`import`项目本身某部分必须改名字的问题，所以我们需要做一个全局替换。
-
-以`Goland`为例，打开`docker-ce`工程(e.g. 我打开的则是`lighter-docker`)，先在工程文件栏里选定整个工程的顶层文件夹，使用快捷键`cmd/ctrl + shift + H`或其他自定义快捷键进入`全局替换(Replace in Path)`，`文件类型(File mask)`选择`*.go`，下面选择`在工程中(In project)`，然后分别将所有的`docker/docker`替换成`[yourname]/engine (e.g. saafo/engine)`，将`docker/cli`替换成`[yourname]/cli (e.g. saafo/cli)`。
 
 这样之后，`Goland`就应该能识别`vendor`文件夹，`import`段也不会报错了（当然，可能会提示要不要重新排序，这个看自己吧）。
 
- <- To be Continued.
+稍微总结一下，我们创建软链接的时候，目的只是为了方便`Goland`识别相关依赖，不至于产生大面积的`import报错`。而我们在构建编译的时候，如果是远程编译，只需要将项目本身deploy到编译机器上，在项目内进行操作即可。这个时候软链接其实并不会用上。编译过程大概是先构建一个构建`docker`的镜像，然后将项目内的`cli`和`engine`导入镜像内的`$GOPATH/src/github.com/docker/cli`和`$GOPATH/src/github.com/docker/docker`，所以我们其实并不需要改项目名字，`github.com`上的`docker/cli`和`docker/docker`的内容其实并不会影响我们。
 
