@@ -4,11 +4,27 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Sun, 17 May 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 28 May 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>配置 Docker TLS 连接</title>
+            <link>https://blog.mintsky.xyz/20200528_configure-docker-tls</link>
+            <guid>https://blog.mintsky.xyz/20200528_configure-docker-tls</guid>
+            <pubDate>Thu, 28 May 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<blockquote>
+                <p>在远程管理<code>Docker</code>的时候，例如用<code>Portainer</code>来连接远程<code>Docker</code>时，默认的方式是在<code>2375</code>端口上连接。但<code>2375</code>上没有任何的鉴权，所以我们需要用更安全的方式来连接远程<code>Docker</code>。</p>
+                <p>本文主要介绍的是通过<code>TLS CA certificate</code>, <code>TLS certificate</code>和<code>TLS key</code>来远程连接<code>Docker</code>。 </p>
+                </blockquote>
+                <h2>生成 TLS 证书和秘钥</h2>
+                <p>生成证书秘钥可以通过<code>openssl</code>，如果不熟悉<code>openssl</code>，在这里介绍一种新的工具：<code>cfssl</code></p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>flask框架概念理解及部署方式</title>
             <link>https://blog.mintsky.xyz/20200517_flask-startup</link>
