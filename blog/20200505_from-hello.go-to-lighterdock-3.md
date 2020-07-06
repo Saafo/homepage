@@ -1,4 +1,4 @@
-# 从hello.go到Lighter Docker（三）知识准备和项目配置
+# 从hello.go到lighterDOCK（三）知识准备和项目配置
 
 这篇文章会比较水，主要是教程链接和学习路线指引。
 
