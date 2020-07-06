@@ -54,7 +54,7 @@ $(window).on('load',async function() {
     if(status == 0) {
         document.getElementById("markdown-toc").innerHTML=""; //删掉原来的内容
         new Toc('main-content',{
-            'level': 2,
+            'level': 3,
             'top': naviTop,
             'class': 'toc',
             'targetId': 'markdown-toc'
