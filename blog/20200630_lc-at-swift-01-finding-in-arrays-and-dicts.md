@@ -2,7 +2,9 @@
 
 最近开始接触Swift和LeetCode。这个系列的每一期主要是展示一道题的解法，然后逐步优化，顺便整理Swift相关语法。
 
-[两数之和](https://leetcode-cn.com/problems/two-sum)
+## 两数之和
+
+[两数之和 - 力扣](https://leetcode-cn.com/problems/two-sum)
 
 > 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
 >
@@ -15,7 +17,7 @@
 > 因为 nums[0] + nums[1] = 2 + 7 = 9
 > 所以返回 [0, 1]
 
-## 无脑法
+### 无脑法
 
 > 这是我刷的第一道题，啥都不会的时候只有用无脑法了。
 
@@ -38,7 +40,7 @@ class Solution {
 
 执行时间较长，但内存消耗是所有方法中消耗最少的。
 
-## 哈希表
+### 哈希表
 
 看评论区可以用哈希表进行优化。
 
@@ -49,7 +51,7 @@ class Solution {
 
 其中，`contains()`在官方文档中的时间复杂度为O(n)。但是在各种教程或者笔记中，这里的`contains()`似乎都被当成了O(1)。~~这是为什么啊？？~~<!-- TODO here -->
 
-### 基于contains()的方案
+#### 基于contains()的方案
 
 ```swift
 class Solution {
