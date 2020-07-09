@@ -15,11 +15,11 @@
             <guid>https://blog.mintsky.xyz/20200708_lc-at-swift-03-linked-list</guid>
             <pubDate>Wed, 08 Jul 2020 00:00:00 GMT</pubDate>
             <description>
-                <![CDATA[<h2>反转链表</h2>
+                <![CDATA[<p>链表的题目，对于思维的难度（除开部分题的递归解法）要求不算高，主要考察的是代码的实现能力，尽量做到简洁。</p>
+                <h2>反转链表</h2>
                 <p><a href="https://leetcode-cn.com/problems/reverse-linked-list/">反转链表 - 力扣</a></p>
                 <blockquote>
-                <p>反转一个单链表。</p>
-                <p>示例:
+                <p>反转一个单链表。
                 </p>
                 </blockquote>
                 <p>阅读更多...</p>
