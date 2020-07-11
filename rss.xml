@@ -4,11 +4,25 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Wed, 08 Jul 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 10 Jul 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>LeetCode@Swift - Vol.4 栈和队列</title>
+            <link>https://blog.mintsky.xyz/20200710_lc-at-swift-04-stack-and-queue</link>
+            <guid>https://blog.mintsky.xyz/20200710_lc-at-swift-04-stack-and-queue</guid>
+            <pubDate>Fri, 10 Jul 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>栈和队列在众多语言中已经有了成熟的实现，面试的时候也一般不会让手写一个栈或者队列。不用太关注底层实现，直接用就行了。</p>
+                <p>栈-&gt;数组/单链表</p>
+                <p>队列-&gt;数组/双链表</p>
+                <h2>比较含退格的字符串</h2>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>LeetCode@Swift - Vol.3 链表</title>
             <link>https://blog.mintsky.xyz/20200708_lc-at-swift-03-linked-list</link>
