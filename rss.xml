@@ -4,11 +4,56 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Fri, 10 Jul 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 14 Jul 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>LeetCode@Swift - Vol.7 map和set</title>
+            <link>https://blog.mintsky.xyz/20200714_lc-at-swift-07-map-and-set</link>
+            <guid>https://blog.mintsky.xyz/20200714_lc-at-swift-07-map-and-set</guid>
+            <pubDate>Tue, 14 Jul 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p><code>map</code>和<code>set</code>的具体实现方式有<code>hashMap</code>、<code>treeMap</code>、<code>hashSet</code>和<code>treeSet</code>。具体的实现过程清楚原理即可，不在此赘述。</p>
+                <p>对应到语言中，map的一般实现方式，在Swift和Python中都是用<code>hashMap</code>来实现的，Java中可以指定hash/tree。set一般都有原生的类型。</p>
+                <h2>有效的字母异位词</h2>
+                <p><a href="https://leetcode-cn.com/problems/valid-anagram/">有效的字母异位词 - 力扣</a></p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
+        <item>
+            <title>LeetCode@Swift - Vol.6 滑动窗口</title>
+            <link>https://blog.mintsky.xyz/20200712_lc-at-swift-06-sliding-window</link>
+            <guid>https://blog.mintsky.xyz/20200712_lc-at-swift-06-sliding-window</guid>
+            <pubDate>Sun, 12 Jul 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>滑动窗口算得上面试中的非常高频的题型。</p>
+                <h2>滑动窗口最大值</h2>
+                <p><a href="https://leetcode-cn.com/problems/sliding-window-maximum/">滑动窗口最大值 - 力扣</a></p>
+                <blockquote>
+                <p>给定一个数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。
+                </p>
+                </blockquote>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
+        <item>
+            <title>LeetCode@Swift - Vol.5 优先队列</title>
+            <link>https://blog.mintsky.xyz/20200711_lc-at-swift-05-priority-queue</link>
+            <guid>https://blog.mintsky.xyz/20200711_lc-at-swift-05-priority-queue</guid>
+            <pubDate>Sat, 11 Jul 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>优先队列也不用太去关注底层实现，一般的语言都已经有了成熟的实现。对于优先队列来说，一般其实现机制有：堆（二叉堆、二项式堆、斐波那契堆）、二叉搜索树。</p>
+                <p>关于堆的各种具体实现的时间复杂度，可以参考<a href="https://en.wikipedia.org/wiki/Heap_(data_structure)#Comparison_of_theoretic_bounds_for_variants">维基百科</a>,需要熟记。</p>
+                <h2>数据流中的第K大元素</h2>
+                <p><a href="https://leetcode-cn.com/problems/kth-largest-element-in-a-stream/">数据流中的第K大元素 - 力扣</a></p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>LeetCode@Swift - Vol.4 栈和队列</title>
             <link>https://blog.mintsky.xyz/20200710_lc-at-swift-04-stack-and-queue</link>
