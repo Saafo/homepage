@@ -1,6 +1,29 @@
 # LeetCode@Swift - Vol.6 滑动窗口
 
+## 滑动窗口题型总结
+
 滑动窗口算得上面试中的非常高频的题型。
+
+滑动窗口主要用来处理连续问题。比如题目求解“连续子串...”、“连续子数组...”，这时就应该能想到滑动窗口。
+
+从类型上，滑动窗口主要有以下三种题型：
+
+* 固定窗口大小
+* 窗口大小不固定，求解最大的满足条件的窗口
+* 窗口大小不固定，求解最小的满足条件的窗口
+
+后两种都称之为`可变窗口`。当然，基本思路都是一样的。
+
+### 固定窗口大小
+
+对于固定窗口，只需要固定初始化左右指针`l`和`r`，分别表示窗口的左右定点，注意：
+
+* `l`初始化为0
+* 初始化`r`，使得`r - l + 1`等于窗口大小
+* 同时移动`l`和`r`
+* 判断窗口内的连续元素是否满足题目限定的条件
+
+一个可行的思路是，将`窗口内的元素是否满足条件`转化为`窗口边缘的两个元素是否满足条件`。具体可以建立辅助数组来实现。[滑动窗口最大值](#滑动窗口最大值)的第三种解法即使如此。
 
 ## 滑动窗口最大值
 
@@ -182,3 +205,83 @@ class Solution {
 ```
 
 执行用时：412 ms 内存消耗：25.7 MB
+
+## 长度最小的子数组
+
+[长度最小的子数组 - 力扣](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)
+
+> 给定一个含有 n 个正整数的数组和一个正整数 s ，找出该数组中满足其和 ≥ s 的长度最小的 连续 子数组，并返回其长度。如果不存在符合条件的子数组，返回 0。
+> 
+> 示例：
+> 
+> 输入：s = 7, nums = [2,3,1,2,4,3]
+> 
+> 输出：2
+> 
+> 解释：子数组 [4,3] 是该条件下的长度最小的子数组。
+> 
+> 进阶：
+> 
+> 如果你已经完成了 O(n) 时间复杂度的解法, 请尝试 O(n log n) 时间复杂度的解法。
+
+### 可变窗口
+
+```swift
+class Solution {
+    func minSubArrayLen(_ s: Int, _ nums: [Int]) -> Int {
+        guard nums.count > 0 else { return 0 }
+        var minLen = Int.max
+        var i = 0
+        var j = 0
+        var sum = nums[0]
+        while i <= j && j < nums.count {
+            if sum < s {
+                guard j < nums.count - 1 else { break }
+                j += 1
+                sum += nums[j]
+            }
+            else {
+                minLen = min(minLen, j - i + 1)
+                sum -= nums[i]
+                i += 1
+            }
+        }
+        return minLen == Int.max ? 0 : minLen
+    }
+}
+```
+
+执行用时：72 ms 内存消耗：21 MB
+
+看了下题解，可以优化的有几点：
+
+* 出现num\[index\]当前数据为目标值，直接return 1
+* 出现当前计算的区域长度为1且满足条件，直接结束循环，return 1
+
+优化后代码
+
+```swift
+class Solution {
+    func minSubArrayLen(_ s: Int, _ nums: [Int]) -> Int {
+        guard nums.count > 0 else { return 0 }
+        var minLen = Int.max
+        var i = 0
+        var sum = 0
+        for (j, item) in nums.enumerated() {
+            guard item != s else { return 1 }
+            sum += item
+            while sum >= s {
+                guard i != j else { return 1 }
+                minLen = min(minLen, j - i + 1)
+                sum -= nums[i]
+                i += 1
+            }
+        }
+        return minLen == Int.max ? 0 : minLen
+    }
+}
+```
+
+执行用时：72 ms 内存消耗：21.1 MB（说明：尝试提交过多次，在72~108之前飘动，感觉纠结这一点时间意义不大）
+
+参考文章：[一文带你AC十道题【滑动窗口】- lucifer210](https://cloud.tencent.com/developer/article/1600147)
