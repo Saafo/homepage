@@ -284,4 +284,378 @@ class Solution {
 
 执行用时：72 ms 内存消耗：21.1 MB（说明：尝试提交过多次，在72~108之前飘动，感觉纠结这一点时间意义不大）
 
+## 无重复字符的最长子串
+
+[无重复字符的最长子串 - 力扣](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
+
+> 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+> 
+> 示例 1:
+> 
+> 输入: "abcabcbb"
+> 
+> 输出: 3 
+> 
+> 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+> 
+> 示例 2:
+> 
+> 输入: "bbbbb"
+> 
+> 输出: 1
+> 
+> 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
+> 
+> 示例 3:
+> 
+> 输入: "pwwkew"
+> 
+> 输出: 3
+> 
+> 解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
+> 请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
+
+### 滑动窗口
+
+考虑滑动窗口解法，先上原始代码：
+
+```swift
+class Solution {
+    func lengthOfLongestSubstring(_ s: String) -> Int {
+        guard s.count > 1 else { return s.count }
+        var maxLen = 0
+        var stack: [Character] = []
+        for top in s {
+            while stack.contains(top) {
+                stack.removeFirst()
+            }
+            stack.append(top)
+            maxLen = max(maxLen, stack.count)
+        }
+        return maxLen
+    }
+}
+```
+
+执行用时：560 ms 内存消耗：21 MB
+
+可以看出用的时间非常多，所以需要优化一下。
+
+我们知道`contains()`方法对普通的数组的时间复杂度是O(n)，所以我们可以避免每次都用`contains()`来查询字符串中是否还有top元素，一旦发现有之后，每次直接去找第一个元素。代码如下：
+
+```swift
+class Solution {
+    func lengthOfLongestSubstring(_ s: String) -> Int {
+        guard s.count > 1 else { return s.count }
+        var maxLen = 0
+        var stack: [Character] = []
+        for top in s {
+            if stack.contains(top) {
+                while stack[0] != top {
+                    stack.removeFirst()
+                }
+                stack.removeFirst()
+            }
+            stack.append(top)
+            maxLen = max(maxLen, stack.count)
+        }
+        return maxLen
+    }
+}
+```
+
+执行用时：120 ms 内存消耗：20.9 MB
+
+可以看出执行时间有了非常大的提升，以后在使用contains()的方法的时候，应该主注意**如果在对非Hashable对象**使用时，避免过多地循环使用（此时时间复杂度为O(n))。
+
+### 滑动窗口改进版
+
+不过即使做了一定的改进，我们仍然需要通过一个一个removeFirst的方式来确定窗口左边界的位置。我们完全可以用一个map来记录每种元素出现过的最后一个位置，代码如下：
+
+```swift
+class Solution {
+    func lengthOfLongestSubstring(_ s: String) -> Int {
+        guard s.count > 1 else { return s.count }
+        var characters = Array(s)
+        var start = 0, ans = 0
+        var dict:[Character: Int] = [:]
+        for (end, item) in characters.enumerated() {
+            if let position = dict[item] {
+                start = max(start, position + 1)
+            }
+            dict[item] = end
+            ans = max(ans, end - start + 1)
+        }
+        return ans
+    }
+}
+```
+
+执行用时：68 ms 内存消耗：21.2 MB
+
+这里需要特别注意的是两个max()的用处。
+
+## 最小覆盖子串
+
+[最小覆盖子串 - 力扣](https://leetcode-cn.com/problems/minimum-window-substring/)
+
+> 给你一个字符串 S、一个字符串 T，请在字符串 S 里面找出：包含 T 所有字符的最小子串。
+> 
+> 示例：
+> 
+> 输入: S = "ADOBECODEBANC", T = "ABC"
+> 
+> 输出: "BANC"
+> 
+> 说明：
+> 
+> 如果 S 中不存这样的子串，则返回空字符串 ""。
+> 
+> 如果 S 中存在这样的子串，我们保证它是唯一的答案。
+
+### 滑动窗口
+
+还是先采用普通的滑动窗口方法:
+
+```swift
+class Solution {
+    func minWindow(_ s: String, _ t: String) -> String {
+        guard s.count > 0 && s.count >= t.count else { return "" }
+        var dict: [Character: Int] = [:]
+        var start = 0, match = 0, tdif = 0
+        var result: (Int, Int) = (-1, -1)
+        var midResult: (Int, Int) = (-1, -1)
+        for c in t {
+            if dict[c] == nil { tdif += 1 }
+            dict[c] = dict[c] == nil ? -1 : dict[c]! - 1
+        }
+        for (end, char) in s.enumerated() {
+            guard dict[char] != nil else { continue }
+            dict[char]! += 1
+            if dict[char] == 0 {
+                match += 1
+                if match == tdif { //刚刚匹配上
+                    while true {
+                        midResult = (start, end)
+                        let firstChar = s[s.index(s.startIndex, offsetBy: start)]
+                        start += 1
+                        guard dict[firstChar] != nil else { continue }
+                        dict[firstChar]! -= 1
+                        if dict[firstChar]! < 0 { 
+                            match -= 1
+                            break
+                        }
+                    }
+                    
+                }
+                
+            }
+            if midResult.0 != -1 {
+                if result.0 == -1 {
+                    result = midResult
+                } else {
+                    if result.1 - result.0 > midResult.1 - midResult.0 {
+                        result = midResult
+                    }
+                }
+            }
+        }
+        return result.0 == -1 ? "" : String(s[s.index(s.startIndex, offsetBy: result.0)...s.index(s.startIndex, offsetBy: result.1)])
+    }
+}
+```
+
+不过这样发现运行超时，超时的用例中字符串和匹配的字符串长度都非常长。于是尝试将字符串先转换成`[Character]`，如下：
+
+```swift
+class Solution {
+    func minWindow(_ s: String, _ t: String) -> String {
+        guard s.count > 0 && s.count >= t.count else { return "" }
+        var S = Array(s)
+        var T = Array(t)
+        var dict: [Character: Int] = [:]
+        var start = 0, match = 0, tdif = 0
+        var result: (Int, Int) = (-1, -1)
+        var midResult: (Int, Int) = (-1, -1)
+        for c in T {
+            if dict[c] == nil { tdif += 1 }
+            dict[c] = dict[c] == nil ? -1 : dict[c]! - 1
+        }
+        for end in 0..<S.count {
+            let char = S[end]
+            guard dict[char] != nil else { continue }
+            dict[char]! += 1
+            if dict[char] == 0 {
+                match += 1
+                if match == tdif { //刚刚匹配上
+                    while true {
+                        midResult = (start, end)
+                        let firstChar = S[start]
+                        start += 1
+                        guard dict[firstChar] != nil else { continue }
+                        dict[firstChar]! -= 1
+                        if dict[firstChar]! < 0 { 
+                            match -= 1
+                            break
+                        }
+                    }
+                    
+                }
+                
+            }
+            if midResult.0 != -1 {
+                if result.0 == -1 {
+                    result = midResult
+                } else {
+                    if result.1 - result.0 > midResult.1 - midResult.0 {
+                        result = midResult
+                    }
+                }
+            }
+        }
+        return result.0 == -1 ? "" : String(S[result.0...result.1])
+    }
+}
+```
+
+执行用时：200 ms 内存消耗：21.8 MB
+
+果然顺利通过，以后做字符串相关的题目，还是先转换成\[Character\]吧。
+
+探究了一下原因，主要在于String中每个字符的长度不同，所以计算Index的时间复杂度其实是O(n)，如果大量地计算index值会非常花时间。有关Swift字符串的相关原理可以参考[这篇文章](https://juejin.im/post/5da1ddfbe51d45782e6039e5)。
+
+本题还有更高效的解法，暂时不做讨论。//TODO
+
+## 找到字符串中所有字母异位词
+
+[找到字符串中所有字母异位词 - 力扣](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
+
+> 给定一个字符串 s 和一个非空字符串 p，找到 s 中所有是 p 的字母异位词的子串，返回这些子串的起始索引。
+> 
+> 字符串只包含小写英文字母，并且字符串 s 和 p 的长度都不超过 20100。
+> 
+> 说明：
+> 
+> 字母异位词指字母相同，但排列不同的字符串。
+> 
+> 不考虑答案输出的顺序。
+
+### 滑动窗口
+
+暂时只提供滑动窗口常规解法
+
+```swift
+class Solution {
+    func findAnagrams(_ s: String, _ p: String) -> [Int] {
+        guard s.count > 0 && s.count >= p.count else { return [] }
+        let S = Array(s)
+        let P = Array(p)
+        var dict: [Character: Int] = [:]
+        var result: [Int] = []
+        var left = 0, right = 0, pDiff = 0, match = 0
+        for i in P {
+            if dict[i] == nil { pDiff += 1 }
+            dict[i] = dict[i] == nil ? -1 : dict[i]! - 1
+        }
+        outer: while left <= S.count - P.count {
+            var tempDict = dict
+            for index in 0..<0+P.count {
+                let item = S[left + index]
+                guard tempDict[item] != nil else {
+                    left += index + 1
+                    continue outer
+                }
+                tempDict[item]! += 1
+                if tempDict[item]! > 0 {
+                    left += 1
+                    continue outer
+                }
+            }
+            result.append(left)
+            match = pDiff
+            right = left + P.count //加速！
+            while right < S.count && tempDict[S[right]] != nil {
+                tempDict[S[right]]! += 1
+                if tempDict[S[right]] == 0 { match += 1 }
+                tempDict[S[left]]! -= 1
+                if tempDict[S[left]] == -1 { match -= 1 }
+                left += 1
+                right += 1
+                if match == pDiff { result.append(left) }
+            }
+            left = right + 1
+        }
+        return result
+    }
+}
+```
+
+## 水果成篮
+
+[水果成篮 - 力扣](https://leetcode-cn.com/problems/fruit-into-baskets/)
+
+> 在一排树中，第 i 棵树产生 tree[i] 型的水果。
+> 
+> 你可以从你选择的任何树开始，然后重复执行以下步骤：
+> 
+> 把这棵树上的水果放进你的篮子里。如果你做不到，就停下来。
+> 
+> 移动到当前树右侧的下一棵树。如果右边没有树，就停下来。
+> 
+> 请注意，在选择一颗树后，你没有任何选择：你必须执行步骤 1，然后执行步骤 2，然后返回步骤 1，然后执行步骤 2，依此类推，直至停止。
+> 
+> 你有两个篮子，每个篮子可以携带任何数量的水果，但你希望每个篮子只携带一种类型的水果。
+> 
+> 用这个程序你能收集的水果总量是多少？
+
+### 滑动窗口
+
+```swift
+class Solution {
+    func totalFruit(_ tree: [Int]) -> Int {
+        guard tree.count > 2 else { return tree.count }
+        var result = 0
+        var left = 0
+        var dict: [Int:Int] = [:]
+        for (right, item) in tree.enumerated() {
+            guard !dict.keys.contains(item) else {
+                dict[item] = right
+                result = max(result, right - left + 1)
+                continue
+                }
+            if dict.count < 2 {
+                dict[item] = right
+                continue
+            } else {
+                result = max(result, right - left)
+                let minValue = dict.values.min()!
+                let minKey: Int? = {
+                    for (key, value) in dict {
+                        if value == minValue {
+                            return key
+                        }
+                    }
+                    return nil
+                }()
+                left = right - 1
+                while tree[left] == tree[left - 1] {
+                    left -= 1
+                }
+                dict[minKey!] = nil
+                dict[item] = right
+            }
+        }
+        return result
+    }
+}
+```
+
+## 和相同的二元子数组
+
+[和相同的二元子数组 - 力扣](https://leetcode-cn.com/problems/binary-subarrays-with-sum/)
+
+> 在由若干 0 和 1  组成的数组 A 中，有多少个和为 S 的非空子数组。
+
+自己写得太拉胯了，以后再整理更好的解法。//TODO
+
 参考文章：[一文带你AC十道题【滑动窗口】- lucifer210](https://cloud.tencent.com/developer/article/1600147)
