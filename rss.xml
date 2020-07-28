@@ -4,11 +4,28 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Tue, 14 Jul 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Jul 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>LeetCode@Swift - Vol.8 树</title>
+            <link>https://blog.mintsky.xyz/20200728_lc-at-swift-08-tree</link>
+            <guid>https://blog.mintsky.xyz/20200728_lc-at-swift-08-tree</guid>
+            <pubDate>Tue, 28 Jul 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>树是算法中很重要的一个结构，通常需要掌握先序/中序/后序的递归/非递归算法，以及BFS/HFS算法。常见的题目有二叉树、二叉搜索树相关的题型。</p>
+                <p>```swift
+                //Definition for a binary tree node.
+                public class TreeNode {
+                    public var val: Int
+                    public var left: TreeNode?
+                    public var right: TreeNode?</p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>LeetCode@Swift - Vol.7 map和set</title>
             <link>https://blog.mintsky.xyz/20200714_lc-at-swift-07-map-and-set</link>

@@ -590,6 +590,8 @@ class Solution {
 }
 ```
 
+执行用时：160 ms 内存消耗：22.3 MB
+
 ## 水果成篮
 
 [水果成篮 - 力扣](https://leetcode-cn.com/problems/fruit-into-baskets/)
@@ -649,6 +651,8 @@ class Solution {
     }
 }
 ```
+
+执行用时：1280 ms 内存消耗：22.9 MB
 
 ## 和相同的二元子数组
 
