@@ -4,11 +4,27 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Tue, 28 Jul 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 29 Jul 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>LeetCode@Swift - Vol.9 递归和分治</title>
+            <link>https://blog.mintsky.xyz/20200729_lc-at-swift-09-divide-and-conquer</link>
+            <guid>https://blog.mintsky.xyz/20200729_lc-at-swift-09-divide-and-conquer</guid>
+            <pubDate>Wed, 29 Jul 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>递归的基本用法在之前的文章中已经有提到也有过不少的应用。对于分治，Divide &amp; Conquer，很重要的一点在于<code>Divide</code>，比如接下来的这一题。</p>
+                <h2>Pow(x, n)</h2>
+                <p><a href="https://leetcode-cn.com/problems/powx-n/">Pow(x, n) - 力扣</a></p>
+                <blockquote>
+                <p>实现 pow(x, n) ，即计算 x 的 n 次幂函数。</p>
+                </blockquote>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>LeetCode@Swift - Vol.8 树</title>
             <link>https://blog.mintsky.xyz/20200728_lc-at-swift-08-tree</link>
