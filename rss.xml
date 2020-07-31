@@ -4,11 +4,42 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Wed, 29 Jul 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 31 Jul 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>LeetCode@Swift - Vol.11 深度优先和广度优先</title>
+            <link>https://blog.mintsky.xyz/20200731_lc-at-swift-11-bfs-and-dfs</link>
+            <guid>https://blog.mintsky.xyz/20200731_lc-at-swift-11-bfs-and-dfs</guid>
+            <pubDate>Fri, 31 Jul 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>BFS和DFS是比先序中序后序更加常考也更加普遍运用的算法。</p>
+                <p>BFS一般只采用非递归实现。</p>
+                <p>DFS可采用递归和非递归实现。</p>
+                <p>但二者并不一定有严格的界限，有的BFS的题也可以用DFS实现。比如下面这道题：</p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
+        <item>
+            <title>LeetCode@Swift - Vol.10 贪心算法</title>
+            <link>https://blog.mintsky.xyz/20200730_lc-at-swift-10-greedy-algorithm</link>
+            <guid>https://blog.mintsky.xyz/20200730_lc-at-swift-10-greedy-algorithm</guid>
+            <pubDate>Thu, 30 Jul 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>适用于贪心算法的场景：</p>
+                <ul>
+                <li>问题能够分解成子问题来解决</li>
+                <li>子问题的最优解能递推到全局问题的最优解（此时子问题的最优解为最优子结构）</li>
+                </ul>
+                <p>贪心算法与动态规划的不同在于，它对每个子问题的解决方案都做出选择，不能回退。
+                动态规划则会保存以前的运算结构，并根据以前的结构对当前进行选择，有回退功能。</p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>LeetCode@Swift - Vol.9 递归和分治</title>
             <link>https://blog.mintsky.xyz/20200729_lc-at-swift-09-divide-and-conquer</link>
@@ -32,12 +63,6 @@
             <pubDate>Tue, 28 Jul 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>树是算法中很重要的一个结构，通常需要掌握先序/中序/后序的递归/非递归算法，以及BFS/HFS算法。常见的题目有二叉树、二叉搜索树相关的题型。</p>
-                <p>```swift
-                //Definition for a binary tree node.
-                public class TreeNode {
-                    public var val: Int
-                    public var left: TreeNode?
-                    public var right: TreeNode?</p>
                 <p>阅读更多...</p>
                 ]]>
             </description>
