@@ -4,11 +4,22 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Mon, 03 Aug 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 05 Sep 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>ICS文件格式解析</title>
+            <link>https://blog.mintsky.xyz/20200905_ics-structure</link>
+            <guid>https://blog.mintsky.xyz/20200905_ics-structure</guid>
+            <pubDate>Sat, 05 Sep 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>最近写了一个生成ics文件的js脚本，过程中大致了解到了ics文件的基本格式，总结在此。</p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>LeetCode@Swift - Vol.12 剪枝</title>
             <link>https://blog.mintsky.xyz/20200803_lc-at-swift-12-prune</link>
