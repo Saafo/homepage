@@ -35,12 +35,16 @@ nav a:hover {
 }
 
 .nav-title {
-    margin-left: 10px;
+    margin: 5px;
     position: relative;
     color: #FFFFFF;
     flex: 1;
-    top: 50%;
-    transform: translateY(-25%);
+}
+
+.nav-title ul {
+    padding-inline-start: 0;
+    max-height: 29px;
+    overflow: hidden;
 }
 
 .nav-container {
