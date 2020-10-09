@@ -52,5 +52,4 @@
 ## 注意事项
 
 * 与`Github Pages`不兼容。如果要在其上使用需要修改js文件。
-* `utterances`使用第三方cookies导致[401报错的问题](https://github.com/utterance/utterances/issues/123)
 * `utterances`目前处于墙的薛定谔态，有时会出现加载不出评论区的情况。
