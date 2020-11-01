@@ -4,11 +4,22 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Sat, 26 Sep 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 11 Oct 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>计算机基础知识复习提纲</title>
+            <link>https://blog.mintsky.xyz/20201011_cs-basics-review</link>
+            <guid>https://blog.mintsky.xyz/20201011_cs-basics-review</guid>
+            <pubDate>Sun, 11 Oct 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>核心专业课学完了，来面向面经整理一下计算机基础的知识点提纲。</p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>GitLab工作流说明</title>
             <link>https://blog.mintsky.xyz/20200926_gitlab-workflow</link>
