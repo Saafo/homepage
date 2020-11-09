@@ -4,11 +4,24 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Sun, 11 Oct 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 09 Nov 2020 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
+        <item>
+            <title>《关于我转生成为字节人这件事》</title>
+            <link>https://blog.mintsky.xyz/20201109_hello-bytedance</link>
+            <guid>https://blog.mintsky.xyz/20201109_hello-bytedance</guid>
+            <pubDate>Mon, 09 Nov 2020 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>不出太大的意外的话，应该下下周会入职字节了。</p>
+                <p>人生的第一份工作，虽然是实习，已经很满意啦。只是对不起猿辅导和有道的HR了🙏。</p>
+                <p>本文对前四个月我的所有实习准备和面试过程做一个回顾和记录吧，如果能给读者带来一点启发，不胜荣幸。</p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
         <item>
             <title>计算机基础知识复习提纲</title>
             <link>https://blog.mintsky.xyz/20201011_cs-basics-review</link>
