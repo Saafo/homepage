@@ -132,31 +132,32 @@ nav a:hover {
   margin: 1rem;
 }
 
-.col-interests, .col-edu {
+.col-interests, .col-experience {
   display: inline-block;
   padding: 1.5rem;
   vertical-align: top;
 }
 
-ul.ul-edu {
+ul.ul-edu, ul.ul-work {
   list-style: none;
   padding-inline-start: 0;
 }
 
-.fa-graduation-cap {
+.fa-graduation-cap, .fa-black-tie {
   vertical-align: top;
   margin-top: 1rem;
+  min-width: 16px;
 }
 
 .description {
   display: inline-block;
 }
 
-.course {
+.course, .role {
   font-size: 1rem;
 }
 
-.institution {
+.institution, .company {
   font-size: 0.8rem;
 }
 
