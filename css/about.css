@@ -138,6 +138,10 @@ nav a:hover {
   vertical-align: top;
 }
 
+.ul-interests li {
+  height: 25px;
+}
+
 ul.ul-edu, ul.ul-work {
   list-style: none;
   padding-inline-start: 0;
