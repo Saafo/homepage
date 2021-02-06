@@ -4,13 +4,24 @@
         <title>Mintsky's Blog</title>
         <link>https://mintsky.xyz/rss.xml</link>
         <description>Posts' Abstracts on Mintsky's Blog</description>
-        <lastBuildDate>Mon, 09 Nov 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 31 Jan 2021 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
         <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
 
         <item>
-            <title>《关于我转生成为字节人这件事》</title>
+            <title>检测 Apple Pencil 连接 iPad</title>
+            <link>https://blog.mintsky.xyz/20210131_detect-apple-pencil</link>
+            <guid>https://blog.mintsky.xyz/20210131_detect-apple-pencil</guid>
+            <pubDate>Sun, 31 Jan 2021 00:00:00 GMT</pubDate>
+            <description>
+                <![CDATA[<p>本文简单介绍一下利用<code>CBCentralManager</code>检测 Apple Pencil 的连接，以及<code>CBCentralManager</code>的使用注意事项。</p>
+                <p>阅读更多...</p>
+                ]]>
+            </description>
+        </item>
+        <item>
+            <title>《Hello Bytedance》</title>
             <link>https://blog.mintsky.xyz/20201109_hello-bytedance</link>
             <guid>https://blog.mintsky.xyz/20201109_hello-bytedance</guid>
             <pubDate>Mon, 09 Nov 2020 00:00:00 GMT</pubDate>
