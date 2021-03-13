@@ -1,6 +1,6 @@
 # My Homepage
 
-[Mintsky's Homepage](https://mintsky.xyz)
+[Saafo's Homepage](https://saafo.cc)
 
 >人类的本质是造轮子。
 
@@ -27,15 +27,15 @@
 ## 使用方法
 
 * clone this repository
-* 全文搜索`mintsky.xyz`替换为您的域名，并将有必要修改的地方都修改掉。这是基于我的需求创建的仓库，所以没有做分离，鲁棒性不好。
+* 全文搜索`saafo.cc`替换为您的域名，并将有必要修改的地方都修改掉。这是基于我的需求创建的仓库，所以没有做分离，鲁棒性不好。
 * pip install markdown
 * `nginx`配置：
   ```
   server{
                 listen 443 ssl;
-                server_name blog.mintsky.xyz;
+                server_name blog.saafo.cc;
                 location = / {
-                        return 301 https://mintsky.xyz;
+                        return 301 https://saafo.cc;
                 }
                 location ~* \.md$ {
                         root (这里放homepage文件夹目录);

@@ -101,7 +101,7 @@ class Solution {
 
 ## 两数之和
 
-请见[LeetCode@Swift - Vol.1 数组和字典的查找 - 两数之和](https://blog.mintsky.xyz/20200630_lc-at-swift-01-finding-in-arrays-and-dicts#tip1)
+请见[LeetCode@Swift - Vol.1 数组和字典的查找 - 两数之和](https://blog.saafo.cc/20200630_lc-at-swift-01-finding-in-arrays-and-dicts#tip1)
 
 ## 三数之和
 

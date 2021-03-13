@@ -9,7 +9,7 @@ function getContent(){
             blogDate = url.slice(6,8);
             $.get("blog/"+url+".md", function(result){
                 if(result) {
-                    document.title = result.split('\n')[0].split('# ')[1] + " - Mintsky's Blog"
+                    document.title = result.split('\n')[0].split('# ')[1] + " - Saafo's Blog"
                     hljs.initHighlightingOnLoad();
                     marked.setOptions({
                         highlight: function (code) {
@@ -61,8 +61,8 @@ $(window).on('load',async function() {
         });
     
         var title = document.getElementsByTagName("h1")[1].textContent;
-        document.title = title + " - Mintsky's Blog"
+        document.title = title + " - Saafo's Blog"
     }else{
-        document.title = "你来到了一片荒芜之地 - Mintsky's Blog"
+        document.title = "你来到了一片荒芜之地 - Saafo's Blog"
     }
 })

@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <rss version='2.0'>
     <channel>
-        <title>Mintsky's Blog</title>
-        <link>https://mintsky.xyz/rss.xml</link>
-        <description>Posts' Abstracts on Mintsky's Blog</description>
+        <title>Saafo's Blog</title>
+        <link>https://saafo.cc/rss.xml</link>
+        <description>Posts' Abstracts on Saafo's Blog</description>
         <lastBuildDate>Sun, 31 Jan 2021 00:00:00 GMT</lastBuildDate>
         <language>zh-CN</language>
         <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>
-        <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>
+        <copyright>Copyright 2020 Saafo All Rights Reserved</copyright>
 
         <item>
             <title>检测 Apple Pencil 连接 iPad</title>
-            <link>https://blog.mintsky.xyz/20210131_detect-apple-pencil</link>
-            <guid>https://blog.mintsky.xyz/20210131_detect-apple-pencil</guid>
+            <link>https://blog.saafo.cc/20210131_detect-apple-pencil</link>
+            <guid>https://blog.saafo.cc/20210131_detect-apple-pencil</guid>
             <pubDate>Sun, 31 Jan 2021 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>本文简单介绍一下利用<code>CBCentralManager</code>检测 Apple Pencil 的连接，以及<code>CBCentralManager</code>的使用注意事项。</p>
@@ -22,8 +22,8 @@
         </item>
         <item>
             <title>《Hello Bytedance》</title>
-            <link>https://blog.mintsky.xyz/20201109_hello-bytedance</link>
-            <guid>https://blog.mintsky.xyz/20201109_hello-bytedance</guid>
+            <link>https://blog.saafo.cc/20201109_hello-bytedance</link>
+            <guid>https://blog.saafo.cc/20201109_hello-bytedance</guid>
             <pubDate>Mon, 09 Nov 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>不出太大的意外的话，应该下下周会入职字节了。</p>
@@ -35,8 +35,8 @@
         </item>
         <item>
             <title>计算机基础知识复习提纲</title>
-            <link>https://blog.mintsky.xyz/20201011_cs-basics-review</link>
-            <guid>https://blog.mintsky.xyz/20201011_cs-basics-review</guid>
+            <link>https://blog.saafo.cc/20201011_cs-basics-review</link>
+            <guid>https://blog.saafo.cc/20201011_cs-basics-review</guid>
             <pubDate>Sun, 11 Oct 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>核心专业课学完了，来面向面经整理一下计算机基础的知识点提纲。</p>
@@ -46,8 +46,8 @@
         </item>
         <item>
             <title>GitLab工作流说明</title>
-            <link>https://blog.mintsky.xyz/20200926_gitlab-workflow</link>
-            <guid>https://blog.mintsky.xyz/20200926_gitlab-workflow</guid>
+            <link>https://blog.saafo.cc/20200926_gitlab-workflow</link>
+            <guid>https://blog.saafo.cc/20200926_gitlab-workflow</guid>
             <pubDate>Sat, 26 Sep 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>使用GitLab工作流可以让我们更充分地使用GitLab，提高团队协作效率。</p>
@@ -58,8 +58,8 @@
         </item>
         <item>
             <title>ICS文件格式解析</title>
-            <link>https://blog.mintsky.xyz/20200905_ics-structure</link>
-            <guid>https://blog.mintsky.xyz/20200905_ics-structure</guid>
+            <link>https://blog.saafo.cc/20200905_ics-structure</link>
+            <guid>https://blog.saafo.cc/20200905_ics-structure</guid>
             <pubDate>Sat, 05 Sep 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>最近写了一个生成ics文件的js脚本，过程中大致了解到了ics文件的基本格式，总结在此。</p>
@@ -69,8 +69,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.12 剪枝</title>
-            <link>https://blog.mintsky.xyz/20200803_lc-at-swift-12-prune</link>
-            <guid>https://blog.mintsky.xyz/20200803_lc-at-swift-12-prune</guid>
+            <link>https://blog.saafo.cc/20200803_lc-at-swift-12-prune</link>
+            <guid>https://blog.saafo.cc/20200803_lc-at-swift-12-prune</guid>
             <pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>剪枝的本质思想就是在递归/DFS的过程中，在进入分支之前加入判断，在遍历的过程中就先排除一些不可能的分支。</p>
@@ -85,8 +85,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.11 深度优先和广度优先</title>
-            <link>https://blog.mintsky.xyz/20200731_lc-at-swift-11-bfs-and-dfs</link>
-            <guid>https://blog.mintsky.xyz/20200731_lc-at-swift-11-bfs-and-dfs</guid>
+            <link>https://blog.saafo.cc/20200731_lc-at-swift-11-bfs-and-dfs</link>
+            <guid>https://blog.saafo.cc/20200731_lc-at-swift-11-bfs-and-dfs</guid>
             <pubDate>Fri, 31 Jul 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>BFS和DFS是比先序中序后序更加常考也更加普遍运用的算法。</p>
@@ -99,8 +99,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.10 贪心算法</title>
-            <link>https://blog.mintsky.xyz/20200730_lc-at-swift-10-greedy-algorithm</link>
-            <guid>https://blog.mintsky.xyz/20200730_lc-at-swift-10-greedy-algorithm</guid>
+            <link>https://blog.saafo.cc/20200730_lc-at-swift-10-greedy-algorithm</link>
+            <guid>https://blog.saafo.cc/20200730_lc-at-swift-10-greedy-algorithm</guid>
             <pubDate>Thu, 30 Jul 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>适用于贪心算法的场景：</p>
@@ -116,8 +116,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.9 递归和分治</title>
-            <link>https://blog.mintsky.xyz/20200729_lc-at-swift-09-divide-and-conquer</link>
-            <guid>https://blog.mintsky.xyz/20200729_lc-at-swift-09-divide-and-conquer</guid>
+            <link>https://blog.saafo.cc/20200729_lc-at-swift-09-divide-and-conquer</link>
+            <guid>https://blog.saafo.cc/20200729_lc-at-swift-09-divide-and-conquer</guid>
             <pubDate>Wed, 29 Jul 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>递归的基本用法在之前的文章中已经有提到也有过不少的应用。对于分治，Divide &amp; Conquer，很重要的一点在于<code>Divide</code>，比如接下来的这一题。</p>
@@ -132,8 +132,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.8 树</title>
-            <link>https://blog.mintsky.xyz/20200728_lc-at-swift-08-tree</link>
-            <guid>https://blog.mintsky.xyz/20200728_lc-at-swift-08-tree</guid>
+            <link>https://blog.saafo.cc/20200728_lc-at-swift-08-tree</link>
+            <guid>https://blog.saafo.cc/20200728_lc-at-swift-08-tree</guid>
             <pubDate>Tue, 28 Jul 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>树是算法中很重要的一个结构，通常需要掌握先序/中序/后序的递归/非递归算法，以及BFS/HFS算法。常见的题目有二叉树、二叉搜索树相关的题型。</p>
@@ -143,8 +143,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.7 map和set</title>
-            <link>https://blog.mintsky.xyz/20200714_lc-at-swift-07-map-and-set</link>
-            <guid>https://blog.mintsky.xyz/20200714_lc-at-swift-07-map-and-set</guid>
+            <link>https://blog.saafo.cc/20200714_lc-at-swift-07-map-and-set</link>
+            <guid>https://blog.saafo.cc/20200714_lc-at-swift-07-map-and-set</guid>
             <pubDate>Tue, 14 Jul 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p><code>map</code>和<code>set</code>的具体实现方式有<code>hashMap</code>、<code>treeMap</code>、<code>hashSet</code>和<code>treeSet</code>。具体的实现过程清楚原理即可，不在此赘述。</p>
@@ -157,8 +157,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.6 滑动窗口</title>
-            <link>https://blog.mintsky.xyz/20200712_lc-at-swift-06-sliding-window</link>
-            <guid>https://blog.mintsky.xyz/20200712_lc-at-swift-06-sliding-window</guid>
+            <link>https://blog.saafo.cc/20200712_lc-at-swift-06-sliding-window</link>
+            <guid>https://blog.saafo.cc/20200712_lc-at-swift-06-sliding-window</guid>
             <pubDate>Sun, 12 Jul 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<h2>滑动窗口题型总结</h2>
@@ -171,8 +171,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.5 优先队列</title>
-            <link>https://blog.mintsky.xyz/20200711_lc-at-swift-05-priority-queue</link>
-            <guid>https://blog.mintsky.xyz/20200711_lc-at-swift-05-priority-queue</guid>
+            <link>https://blog.saafo.cc/20200711_lc-at-swift-05-priority-queue</link>
+            <guid>https://blog.saafo.cc/20200711_lc-at-swift-05-priority-queue</guid>
             <pubDate>Sat, 11 Jul 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>优先队列也不用太去关注底层实现，一般的语言都已经有了成熟的实现。对于优先队列来说，一般其实现机制有：堆（二叉堆、二项式堆、斐波那契堆）、二叉搜索树。</p>
@@ -185,8 +185,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.4 栈和队列</title>
-            <link>https://blog.mintsky.xyz/20200710_lc-at-swift-04-stack-and-queue</link>
-            <guid>https://blog.mintsky.xyz/20200710_lc-at-swift-04-stack-and-queue</guid>
+            <link>https://blog.saafo.cc/20200710_lc-at-swift-04-stack-and-queue</link>
+            <guid>https://blog.saafo.cc/20200710_lc-at-swift-04-stack-and-queue</guid>
             <pubDate>Fri, 10 Jul 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>栈和队列在众多语言中已经有了成熟的实现，面试的时候也一般不会让手写一个栈或者队列。不用太关注底层实现，直接用就行了。</p>
@@ -199,8 +199,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.3 链表</title>
-            <link>https://blog.mintsky.xyz/20200708_lc-at-swift-03-linked-list</link>
-            <guid>https://blog.mintsky.xyz/20200708_lc-at-swift-03-linked-list</guid>
+            <link>https://blog.saafo.cc/20200708_lc-at-swift-03-linked-list</link>
+            <guid>https://blog.saafo.cc/20200708_lc-at-swift-03-linked-list</guid>
             <pubDate>Wed, 08 Jul 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>链表的题目，对于思维的难度（除开部分题的递归解法）要求不算高，主要考察的是代码的实现能力，尽量做到简洁。</p>
@@ -216,8 +216,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.2 排序算法</title>
-            <link>https://blog.mintsky.xyz/20200701_lc-at-swift-02-sorting-algorithm</link>
-            <guid>https://blog.mintsky.xyz/20200701_lc-at-swift-02-sorting-algorithm</guid>
+            <link>https://blog.saafo.cc/20200701_lc-at-swift-02-sorting-algorithm</link>
+            <guid>https://blog.saafo.cc/20200701_lc-at-swift-02-sorting-algorithm</guid>
             <pubDate>Wed, 01 Jul 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<h2>寻找两个正序数组的中位数</h2>
@@ -233,8 +233,8 @@
         </item>
         <item>
             <title>LeetCode@Swift - Vol.1 数组和字典的查找</title>
-            <link>https://blog.mintsky.xyz/20200630_lc-at-swift-01-finding-in-arrays-and-dicts</link>
-            <guid>https://blog.mintsky.xyz/20200630_lc-at-swift-01-finding-in-arrays-and-dicts</guid>
+            <link>https://blog.saafo.cc/20200630_lc-at-swift-01-finding-in-arrays-and-dicts</link>
+            <guid>https://blog.saafo.cc/20200630_lc-at-swift-01-finding-in-arrays-and-dicts</guid>
             <pubDate>Tue, 30 Jun 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>最近开始接触Swift和LeetCode。这个系列的每一期主要是展示一道题的解法，然后逐步优化，顺便整理Swift相关语法。</p>
@@ -250,8 +250,8 @@
         </item>
         <item>
             <title>配置 Docker TLS 连接</title>
-            <link>https://blog.mintsky.xyz/20200528_configure-docker-tls</link>
-            <guid>https://blog.mintsky.xyz/20200528_configure-docker-tls</guid>
+            <link>https://blog.saafo.cc/20200528_configure-docker-tls</link>
+            <guid>https://blog.saafo.cc/20200528_configure-docker-tls</guid>
             <pubDate>Thu, 28 May 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<blockquote>
@@ -266,8 +266,8 @@
         </item>
         <item>
             <title>flask框架概念理解及部署方式</title>
-            <link>https://blog.mintsky.xyz/20200517_flask-startup</link>
-            <guid>https://blog.mintsky.xyz/20200517_flask-startup</guid>
+            <link>https://blog.saafo.cc/20200517_flask-startup</link>
+            <guid>https://blog.saafo.cc/20200517_flask-startup</guid>
             <pubDate>Sun, 17 May 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<blockquote>
@@ -282,8 +282,8 @@
         </item>
         <item>
             <title>从hello.go到lighterDOCK（三）知识准备和项目配置</title>
-            <link>https://blog.mintsky.xyz/20200505_from-hello.go-to-lighterdock-3</link>
-            <guid>https://blog.mintsky.xyz/20200505_from-hello.go-to-lighterdock-3</guid>
+            <link>https://blog.saafo.cc/20200505_from-hello.go-to-lighterdock-3</link>
+            <guid>https://blog.saafo.cc/20200505_from-hello.go-to-lighterdock-3</guid>
             <pubDate>Tue, 05 May 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>这篇文章会比较水，主要是教程链接和学习路线指引。</p>
@@ -299,8 +299,8 @@
         </item>
         <item>
             <title>从hello.go到lighterDOCK（二）在国内编译Docker-ce</title>
-            <link>https://blog.mintsky.xyz/20200503_from-hello.go-to-lighterdock-2</link>
-            <guid>https://blog.mintsky.xyz/20200503_from-hello.go-to-lighterdock-2</guid>
+            <link>https://blog.saafo.cc/20200503_from-hello.go-to-lighterdock-2</link>
+            <guid>https://blog.saafo.cc/20200503_from-hello.go-to-lighterdock-2</guid>
             <pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<blockquote>
@@ -318,8 +318,8 @@
         </item>
         <item>
             <title>从hello.go到lighterDOCK（一）在国内编译moby</title>
-            <link>https://blog.mintsky.xyz/20200501_from-hello.go-to-lighterdock-1</link>
-            <guid>https://blog.mintsky.xyz/20200501_from-hello.go-to-lighterdock-1</guid>
+            <link>https://blog.saafo.cc/20200501_from-hello.go-to-lighterdock-1</link>
+            <guid>https://blog.saafo.cc/20200501_from-hello.go-to-lighterdock-1</guid>
             <pubDate>Fri, 01 May 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<blockquote>
@@ -338,8 +338,8 @@
         </item>
         <item>
             <title>人类的本质是造轮子</title>
-            <link>https://blog.mintsky.xyz/20200410_new-home</link>
-            <guid>https://blog.mintsky.xyz/20200410_new-home</guid>
+            <link>https://blog.saafo.cc/20200410_new-home</link>
+            <guid>https://blog.saafo.cc/20200410_new-home</guid>
             <pubDate>Fri, 10 Apr 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>博客终于建好了。</p>
@@ -352,8 +352,8 @@
         </item>
         <item>
             <title>用docker-compose部署postgresql和pgAdmin4</title>
-            <link>https://blog.mintsky.xyz/20200307_docker-compose-postgres</link>
-            <guid>https://blog.mintsky.xyz/20200307_docker-compose-postgres</guid>
+            <link>https://blog.saafo.cc/20200307_docker-compose-postgres</link>
+            <guid>https://blog.saafo.cc/20200307_docker-compose-postgres</guid>
             <pubDate>Sat, 07 Mar 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<blockquote>
@@ -369,8 +369,8 @@
         </item>
         <item>
             <title>Golang 在 VSCode 中的调试配置</title>
-            <link>https://blog.mintsky.xyz/20200229_configure-go-in-vscode</link>
-            <guid>https://blog.mintsky.xyz/20200229_configure-go-in-vscode</guid>
+            <link>https://blog.saafo.cc/20200229_configure-go-in-vscode</link>
+            <guid>https://blog.saafo.cc/20200229_configure-go-in-vscode</guid>
             <pubDate>Sat, 29 Feb 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<p>（解决Golang在VSCode中调试时无法接收标准输入(stdin)的问题）</p>
@@ -385,8 +385,8 @@
         </item>
         <item>
             <title>阿里云ECS初始化及常用操作</title>
-            <link>https://blog.mintsky.xyz/20200218_ali-ecs</link>
-            <guid>https://blog.mintsky.xyz/20200218_ali-ecs</guid>
+            <link>https://blog.saafo.cc/20200218_ali-ecs</link>
+            <guid>https://blog.saafo.cc/20200218_ali-ecs</guid>
             <pubDate>Tue, 18 Feb 2020 00:00:00 GMT</pubDate>
             <description>
                 <![CDATA[<h2>初始化</h2>

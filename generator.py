@@ -69,7 +69,7 @@ def writeHTML(blogList):
     space28 = '                            '#方便处理缩进
     newMainContent = ''
     for i in range(len(blogList)): 
-        blogLink = 'https://blog.mintsky.xyz/'+blogList[i].blogName
+        blogLink = 'https://blog.saafo.cc/'+blogList[i].blogName
         newMainContent += "                <div class='post shadow'>\n                    <header class='post-header'>\n                        <h1 class='post-title'>\n                            <a href='{blogLink}' class='random-color'>\n                                {blogTitle}\n                            </a>\n                        </h1>\n                        <div class='post-meta'>\n                            <span class='post-time'>{blogYear}·{blogMonth}·{blogDay}</span>\n                        </div>\n                    </header>\n                    <div class='post-body markdown-body'>\n                        {blogAbstract}                    </div>\n                    <div class='post-button random-bg-color'>\n                        <a href='{blogLink}'>\n                            阅读全文\n                        </a>\n                    </div>\n                </div>\n".format(blogLink=blogLink, blogTitle=blogList[i].blogTitle, blogYear=blogList[i].blogTime[0:4], blogMonth=blogList[i].blogTime[4:6], blogDay=blogList[i].blogTime[6:8],blogAbstract=re.sub('\n','\n'+space28, blogList[i].blogAbstract)) #space28:处理缩进
 
     #备份
@@ -86,14 +86,14 @@ def timeFormat(blogTime):
     return time.strftime('%a, %d %b %Y %H:%M:%S GMT',time.strptime(blogTime,'%Y%m%d'))
 
 def writeRSS(blogList):
-    part1 = "<?xml version='1.0' encoding='utf-8'?>\n<rss version='2.0'>\n    <channel>\n        <title>Mintsky's Blog</title>\n        <link>https://mintsky.xyz/rss.xml</link>\n        <description>Posts' Abstracts on Mintsky's Blog</description>\n        <lastBuildDate>{buildTime}</lastBuildDate>\n        <language>zh-CN</language>\n        <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>\n        <copyright>Copyright 2020 Mintsky All Rights Reserved</copyright>\n\n".format(buildTime=timeFormat(blogList[0].blogTime))
+    part1 = "<?xml version='1.0' encoding='utf-8'?>\n<rss version='2.0'>\n    <channel>\n        <title>Saafo's Blog</title>\n        <link>https://saafo.cc/rss.xml</link>\n        <description>Posts' Abstracts on Saafo's Blog</description>\n        <lastBuildDate>{buildTime}</lastBuildDate>\n        <language>zh-CN</language>\n        <generator>https://github.com/saafo/homepage/blob/master/generator.py</generator>\n        <copyright>Copyright 2020 Saafo All Rights Reserved</copyright>\n\n".format(buildTime=timeFormat(blogList[0].blogTime))
     part2 = "\n    </channel>\n</rss>"
 
     #构造新main-content
     space16 = "                "
     newMainContent = ''
     for i in range(len(blogList)):
-        blogLink = 'https://blog.mintsky.xyz/'+blogList[i].blogName
+        blogLink = 'https://blog.saafo.cc/'+blogList[i].blogName
         newMainContent += "        <item>\n            <title>{blogTitle}</title>\n            <link>{blogLink}</link>\n            <guid>{blogLink}</guid>\n            <pubDate>{blogTime}</pubDate>\n            <description>\n                <![CDATA[{blogAbstract}]]>\n            </description>\n        </item>\n".format(blogLink=blogLink, blogTitle=blogList[i].blogTitle, blogTime=timeFormat(blogList[i].blogTime),blogAbstract=re.sub('\n','\n'+space16, blogList[i].blogAbstract + "\n<p>阅读更多...</p>\n"))
     
     #备份

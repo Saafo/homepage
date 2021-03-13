@@ -110,7 +110,7 @@ END:VCALENDAR
 | UID | GUID/UUID，日程唯一识别符，按照格式随机生成 | 66159abd-f4b9-477f-8eb8-4772eb9347e1 |
 | SUMMARY | 日程名称 | 一个日程示例 by @Saafo |
 | LOCATION | 日程地点 | 成都双流国际机场 |
-| DESCRIPTION | 日程详细描述 | ics文件说明 from mintsky.xyz |
+| DESCRIPTION | 日程详细描述 | ics文件说明 from saafo.cc |
 | DTSTART;TZID=Asia/Shanghai | 日程开始时间（上海时区） | 20200907T083000 |
 | DTEND;TZID=Asia/Shanghai | 日程结束时间（上海时区） | 20200907T100500 |
 | RRULE | 重复规则 | <放到后面专门讲> |
